@@ -51,7 +51,7 @@ int main(){
 	int fd,n;
 	//:w21=1 set waveform to square
 	uint8_t write_buffer[WR_BUFFER_LEN]=":w23=50000,0.\r\n";
-	uint8_t write_buffer2[WR_BUFFER_LEN]=":w21=0.\r\n";
+	uint8_t write_buffer2[WR_BUFFER_LEN]=":w21=1.\r\n";
 	uint8_t read_buffer[RD_BUFFER_LEN];
 	fd=open_port();
 	n = write(fd, write_buffer, WR_BUFFER_LEN);
