@@ -26,8 +26,8 @@ int main()
 		//invertieren
     	if(drv.readDipSwitch() == 1) {
     		std::cout<<"Dip ist 1"<<std::endl;
-    		drv.digitalWrite0(0b11111111 ^ drv.digitalRead0());
-    		drv.digitalWrite1(0b11111111 ^ drv.digitalRead1());//~
+    		drv.digitalWrite0(~drv.digitalRead0());
+    		drv.digitalWrite1(~drv.digitalRead1());//~
 
 		} else if(drv.readDipSwitch() == 2) {
 //Night-Rider
